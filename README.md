@@ -6,7 +6,7 @@ Very much a work-in-progeess.
 
 <div align="center">
     <br>
-	<img src="media/screenshot.png">
+    <img src="media/screenshot.png">
 </div>
 
 ## Disclaimer

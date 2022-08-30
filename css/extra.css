@@ -10,22 +10,22 @@ html.dark-mode .lg77cbj3 {
 
 /* Fix some broken colors in dark mode */
 .__fb-dark-mode .__fb-light-mode {
-	--wash: #3E4042;
-	--surface-background: #3E4042;
-	--overlay-alpha-80: var(--base-twenty);
-	--shadow-inset: var(--base-five);
+    --wash: #3E4042;
+    --surface-background: #3E4042;
+    --overlay-alpha-80: var(--base-twenty);
+    --shadow-inset: var(--base-five);
     --card-background: var(--container-dark-color);
     --divider: var(--list-header-color);
 }
 
 /* Send message field: fix right container corners */
 .cetpsuna {
-	display: none !important;
+    display: none !important;
 }
 
 /* Main chat window: zoom */
 /* TODO: make dynamic */
 [role=main] [role=grid] {
-	zoom: 1.2 !important;
-	border: none !important;
+    zoom: 1.2 !important;
+    border: none !important;
 }
