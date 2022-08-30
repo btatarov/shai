@@ -13,21 +13,21 @@ app.setVersion('0.0.1')
 
 app.whenReady().then(() => {
     const win = new BrowserWindow({
-        title: app.name,
         width: 1024,
         height: 768,
+        title: app.name,
+        autoHideMenuBar: true,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
     })
-
-    win.loadURL('https://www.messenger.com/login/')
 
     win.setTitle(app.name)
     win.on('page-title-updated', async (event) => {
         event.preventDefault()
     })
 
+    win.loadURL('https://www.messenger.com/login/')
     win.webContents.on('dom-ready', async () => {
         // inject caprine css
         const files = ['browser.css', 'scrollbar.css', 'dark-mode.css']
