@@ -8,3 +8,7 @@ Thumbs.db
 
 # node.js
 node_modules
+
+# extra
+/shai
+/TODO.txt
