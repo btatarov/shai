@@ -12,6 +12,8 @@ html.dark-mode .lg77cbj3 {
 .__fb-dark-mode .__fb-light-mode {
 	--wash: #3E4042;
 	--surface-background: #3E4042;
+	--overlay-alpha-80: var(--base-twenty);
+	--shadow-inset: var(--base-five);
     --card-background: var(--container-dark-color);
     --divider: var(--list-header-color);
 }
