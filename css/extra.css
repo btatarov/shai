@@ -1,0 +1,29 @@
+/* Restore original fonts (for now) */
+body {
+    font-family: Helvetica, Arial, sans-serif !important;
+}
+
+/* Main chat window */
+html.dark-mode .lg77cbj3 {
+    background-color: var(--container-color) !important;
+}
+
+/* Fix some broken colors in dark mode */
+.__fb-dark-mode .__fb-light-mode {
+	--wash: #3E4042;
+	--surface-background: #3E4042;
+    --card-background: var(--container-dark-color);
+    --divider: var(--list-header-color);
+}
+
+/* Send message field: fix right container corners */
+.cetpsuna {
+	display: none !important;
+}
+
+/* Main chat window: zoom */
+/* TODO: make dynamic */
+[role=main] [role=grid] {
+	zoom: 1.2 !important;
+	border: none !important;
+}

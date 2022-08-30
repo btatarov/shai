@@ -1,0 +1,10 @@
+# Generic
+*~
+._*
+*.log
+*.pid
+*.DS_Store
+Thumbs.db
+
+# node.js
+node_modules
