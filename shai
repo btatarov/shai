@@ -1,0 +1,3 @@
+#!/bin/bash
+BASEDIR="$( cd "$(dirname "$0")/" ; pwd -P )"
+/usr/bin/electron "$BASEDIR/src/index.js"

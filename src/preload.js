@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const useDarkColors = true
+    const useDarkColors = true // TODO: read from settings
 
     const element = document.documentElement
     element.classList.toggle('dark-mode', useDarkColors)

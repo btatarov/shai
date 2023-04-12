@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Shai
+Exec=shai
+Terminal=false
+Type=Application
+StartupNotify=false
+Icon=FacebookMessenger-facebook.com
+Categories=InstantMessaging;Network;
+Comment=Facebook Messenger Wrapper
