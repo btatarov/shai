@@ -4,7 +4,7 @@ body {
 }
 
 /* Main chat window */
-html.dark-mode .lg77cbj3 {
+html.dark-mode .xcrg951 {
     background-color: var(--container-color) !important;
 }
 
@@ -16,6 +16,20 @@ html.dark-mode .lg77cbj3 {
     --shadow-inset: var(--base-five);
     --card-background: var(--container-dark-color);
     --divider: var(--list-header-color);
+    --primary-icon: var(--always-white);
+    --secondary-text: var(--base-fifty);
+    --secondary-button-background: var(--base-ten);
+    --mwp-reply-background-color: var(--comment-background) !important;
+}
+
+/* Messenger Room icon */
+.x1p6odiv {
+    color: var(--primary-icon) !important;
+}
+
+/* React menu customize plus icon */
+.xep6ejk {
+    filter: brightness(0) invert(1) !important;
 }
 
 /* Send message field: fix right container corners */
