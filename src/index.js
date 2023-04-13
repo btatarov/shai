@@ -33,14 +33,19 @@ app.whenReady().then(_ => {
     })
 
     // handle light/dark mode config
-    if (nativeTheme.shouldUseDarkColors) {
-        config.colorScheme = 'dark'
+    let colorScheme = 'light'
+    if (config.colorScheme === 'system') {
+        if (nativeTheme.shouldUseDarkColors) {
+            colorScheme = 'dark'
+        } else {
+            colorScheme = 'light'
+        }
     } else {
-        config.colorScheme = 'light'
+        colorScheme = config.colorScheme
     }
 
     ipcMain.handle('getColorScheme', async _ => {
-        return config.colorScheme
+        return colorScheme
     })
 
     // don't change title on new messages

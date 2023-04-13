@@ -1,5 +1,5 @@
 const config = {
-    colorScheme: 'light',
+    colorScheme: 'system',
 }
 
 module.exports = { config }
