@@ -1,0 +1,22 @@
+{
+    "name": "shai",
+	  "productName": "Shai",
+    "version": "0.0.4",
+    "license": "MIT",
+    "author": {
+        "name": "Bogdan Tatarov",
+        "email": "bogdan@tatarov.me",
+        "url": "https://github.com/btatarov"
+    },
+    "scripts": {
+        "dev": "electron-webpack dev",
+        "compile": "electron-webpack",
+        "dist": "yarn compile && electron-builder",
+        "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "electron": "^22.3.3"
+    }
+}
