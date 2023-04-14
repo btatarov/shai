@@ -1,14 +1,9 @@
-/* Restore original fonts  */
-body {
-    font-family: Helvetica, Arial, sans-serif !important;
-}
-
 /* Main chat window */
-html.dark-mode .xcrg951 {
+html.__fb-dark-mode .xcrg951 {
     background-color: var(--container-color) !important;
 }
 
-/* Fix some broken colors in dark mode */
+/* Fix some broken colors in dark mode instead of observing for DOM changes */
 .__fb-dark-mode .__fb-light-mode {
     --wash: #3E4042;
     --surface-background: #3E4042;

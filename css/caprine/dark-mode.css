@@ -17,118 +17,118 @@
 	--white: #fff;
 }
 
-html.dark-mode body {
+html.__fb-dark-mode body {
 	color: var(--base-seventy);
 	background: var(--container-color) !important;
 }
 
 /* Fixes appearance of "Verify Account" screen text */
-html.dark-mode ._3-mr ._3-mt,
-html.dark-mode ._3-mr ._3-mu {
+html.__fb-dark-mode ._3-mr ._3-mt,
+html.__fb-dark-mode ._3-mr ._3-mu {
 	color: #fff;
 }
 
-html.dark-mode ._3v_o, /* Login screen */
-html.dark-mode body.UIPage_LoggedOut ._li, /* 2FA screen */
-html.dark-mode body.UIPage_LoggedOut ._4-u5 /* 2FA screen */ {
+html.__fb-dark-mode ._3v_o, /* Login screen */
+html.__fb-dark-mode body.UIPage_LoggedOut ._li, /* 2FA screen */
+html.__fb-dark-mode body.UIPage_LoggedOut ._4-u5 /* 2FA screen */ {
 	background-color: var(--container-dark-color);
 }
 
 /* Login title and names */
-html.dark-mode ._5hy4,
-html.dark-mode ._3403 {
+html.__fb-dark-mode ._5hy4,
+html.__fb-dark-mode ._3403 {
 	color: var(--base-fourty) !important;
 }
 
 /* Login inputs */
-html.dark-mode ._3v_o ._55r1 {
+html.__fb-dark-mode ._3v_o ._55r1 {
 	background: var(--base-five);
 	color: var(--base-seventy);
 }
-html.dark-mode ._3v_o ._55r1::-webkit-input-placeholder {
+html.__fb-dark-mode ._3v_o ._55r1::-webkit-input-placeholder {
 	color: var(--base-thirty) !important;
 }
 
 /* "Keep me signed in" checkbox */
-html.dark-mode .uiInputLabelInput {
+html.__fb-dark-mode .uiInputLabelInput {
 	filter: opacity(70%);
 }
 
 /* "Keep me signed in" text */
-html.dark-mode .uiInputLabelLabel {
+html.__fb-dark-mode .uiInputLabelLabel {
 	color: var(--base-fourty) !important;
 }
 
 /* 2FA screen modal */
-html.dark-mode body.UIPage_LoggedOut ._4-u8 {
+html.__fb-dark-mode body.UIPage_LoggedOut ._4-u8 {
 	background: var(--container-color);
 	border-color: var(--base-five) !important;
 }
 
 /* 2FA screen modal title */
-html.dark-mode body.UIPage_LoggedOut ._2e9n {
+html.__fb-dark-mode body.UIPage_LoggedOut ._2e9n {
 	border-color: var(--base-five);
 	color: #fff;
 }
 
 /* 2FA screen modal separator */
-html.dark-mode body.UIPage_LoggedOut ._p0k ._5hzs {
+html.__fb-dark-mode body.UIPage_LoggedOut ._p0k ._5hzs {
 	border-color: var(--base-five);
 }
 
 /* 2FA screen modal separators */
-html.dark-mode body.UIPage_LoggedOut a {
+html.__fb-dark-mode body.UIPage_LoggedOut a {
 	color: var(--blue);
 }
 
 /* 2FA screen modal input */
-html.dark-mode body.UIPage_LoggedOut input {
+html.__fb-dark-mode body.UIPage_LoggedOut input {
 	background: var(--base-ten);
 	border-color: var(--base-ten);
 	color: var(--base-ninety);
 }
 
 /* Cookies notification: background */
-html.dark-mode ._9o-w ._9o-c {
+html.__fb-dark-mode ._9o-w ._9o-c {
 	background: var(--container-color) !important;
 }
 /* Cookies notification: text */
-html.dark-mode ._9o-g {
+html.__fb-dark-mode ._9o-g {
 	color: var(--base-seventy) !important;
 }
 /* Cookies notification: collapsible headers */
-html.dark-mode ._9o-l {
+html.__fb-dark-mode ._9o-l {
 	color: var(--base-seventy) !important;
 }
 /* Cookies notification: subheaders */
-html.dark-mode ._9si- {
+html.__fb-dark-mode ._9si- {
 	color: var(--base-seventy) !important;
 }
 /* Cookies notification: hamburger menu */
-html.dark-mode ._42ft._4jy0._55pi._2agf._4o_4._9o-e._p._4jy3._517h._51sy {
+html.__fb-dark-mode ._42ft._4jy0._55pi._2agf._4o_4._9o-e._p._4jy3._517h._51sy {
 	background: var(--container-color) !important;
 }
 /* Cookies notification: hamburger menu background */
-html.dark-mode ._54ng {
+html.__fb-dark-mode ._54ng {
 	background: var(--container-color) !important;
 }
 /* Cookies notification: hamburger menu text */
-html.dark-mode ._54nh {
+html.__fb-dark-mode ._54nh {
 	color: var(--base-seventy) !important;
 }
 /* Cookies notification: hamburger menu column borders */
-html.dark-mode ._54nc {
+html.__fb-dark-mode ._54nc {
 	border-color: var(--container-color) !important;
 }
 /* Cookies notification: icons */
-html.dark-mode .img.sp_ng1YXMZLXub {
+html.__fb-dark-mode .img.sp_ng1YXMZLXub {
 	filter: invert(0.66);
 }
 /* Cookies notification: rectangular boxes */
-html.dark-mode .pam._9o-n.uiBoxGray {
+html.__fb-dark-mode .pam._9o-n.uiBoxGray {
 	background-color: var(--base-ten) !important;
 }
-html.dark-mode ._9xq0 {
+html.__fb-dark-mode ._9xq0 {
 	color: var(--base-seventy) !important;
 }
 
@@ -176,25 +176,25 @@ html.dark-mode ._9xq0 {
 
 /* Search results: Close button */
 /* TODO: Remove when fixed by fb, since --always-white is not good here */
-html.dark-mode .x14hiurz {
+html.__fb-dark-mode .x14hiurz {
 	background-color: transparent !important;
 }
 
 /* Attachment background color in Chat Box */
 /* TODO: Remove when fixed by fb, since #d6d9dd is too bright here */
 /* Current Background-Color is same style as add attachment button */
-html.dark-mode .x1ybostu {
+html.__fb-dark-mode .x1ybostu {
 	background-color: rgba(134 142 153 / 25%);
 }
 
 /* Recipient Pills in new message form */
 /* TODO: Remove when fixed by fb, since #f3f3f4 is too bright here */
 /* It seems FB uses shades of blue here */
-html.dark-mode .x4noic3 {
+html.__fb-dark-mode .x4noic3 {
 	background-color: var(--secondary-button-background);
 }
 
 /* Create room icon color */
-html.dark-mode .x1p6odiv {
+html.__fb-dark-mode .x1p6odiv {
 	color: var(--primary-icon);
 }

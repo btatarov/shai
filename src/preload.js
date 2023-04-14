@@ -1,24 +1,15 @@
 const { ipcRenderer } = require('electron')
 
 
-let useDarkColors = false
+let colorScheme = 'light'
 ipcRenderer.invoke('getColorScheme').then(scheme => {
-    useDarkColors = (scheme === 'dark')
+    colorScheme = (scheme === 'dark') ? 'dark' : 'light'
 })
 
 document.addEventListener('DOMContentLoaded', async _ => {
-    // handle light/dark mode
-    const element = document.documentElement
-    element.classList.toggle('dark-mode', useDarkColors)
-    element.classList.toggle('light-mode', !useDarkColors)
-    element.classList.toggle('__fb-dark-mode', useDarkColors)
-    element.classList.toggle('__fb-light-mode', !useDarkColors)
-
-    const className = useDarkColors ? '__fb-light-mode' : '__fb-dark-mode'
-    const elements = [...document.querySelectorAll(`.${className}`)]
-    elements.map(element => {
-        element.classList.remove(className)
-    })
+    // set light/dark mode
+    document.documentElement.classList.toggle('__fb-light-mode', colorScheme === 'light')
+    document.documentElement.classList.toggle('__fb-dark-mode', colorScheme === 'dark')
 
     // handle scroll events
     document.addEventListener('scroll', async event => {
