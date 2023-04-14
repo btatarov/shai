@@ -96,7 +96,7 @@ html.dark-mode ._9o-w ._9o-c {
 html.dark-mode ._9o-g {
 	color: var(--base-seventy) !important;
 }
-/* Cookies notification: collpasible headers */
+/* Cookies notification: collapsible headers */
 html.dark-mode ._9o-l {
 	color: var(--base-seventy) !important;
 }
@@ -139,30 +139,14 @@ html.dark-mode ._9xq0 {
 	color: var(--primary-text);
 }
 
-/* Icons made with SVG (create a room, preferences options, etc.) */
-.b6ax4al1.m4pnbp5e.somyomsx.ahndzqod.g4fisb7v > path {
-	fill: currentcolor;
-	color: var(--primary-text);
-}
-
 /* Chat list: Mute icon */
 .bp9cbjyn.j83agx80.btwxx1t3 .dlv3wnog.lupvgy83 .a8c37x1j {
 	fill: currentcolor;
 	color: var(--primary-text);
 }
 
-/* Right sidebar: Icon color */
-.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.g5gj957u.f4tghd1a.ifue306u.kuivcneq.t63ysoy8 [role='button'] svg {
-	fill: currentcolor;
-	color: var(--primary-text);
-}
-/* Right sidebar: Path of icon */
-.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.g5gj957u.f4tghd1a.ifue306u.kuivcneq.t63ysoy8 [role='button'] svg path {
-	fill: currentcolor;
-	color: var(--primary-text);
-}
-/* Right sidebar: search icon */
-.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.g5gj957u.f4tghd1a.ifue306u.kuivcneq.t63ysoy8 [role='button'] svg[role='presentation'] path {
+/* Right sidebar: icons */
+.x1qhmfi1.x14yjl9h.xudhj91.x18nykt9.xww2gxu.x1fgtraw.x1264ykn.x78zum5.x6s0dn4.xl56j7k svg path {
 	fill: currentcolor;
 	color: var(--primary-text);
 }
@@ -186,20 +170,31 @@ html.dark-mode ._9xq0 {
 }
 
 /* Radio buttons */
-.bdao358l.om3e55n1.g4tp4svg {
+.x14yjl9h.xudhj91.x18nykt9.xww2gxu.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.xamhcws.xol2nv.xlxy82.x19p7ews.x9f619.x1rg5ohu.x2lah0s.x1n2onr6.x1tz4bnf.xmds5ef.x25epmt.x11y6y4w.xxk0z11.xvy4d1p {
 	--accent: var(--primary-text);
-}
-
-/* Backgrounds of various buttons ("Visit Group", audio call, etc.) */
-/* TODO: Remove when fixed by fb, since -floating should not be here */
-/* Audio / video call */
-.qmqpeqxj.e7u6y3za.qwcclf47.nmlomj2f.i85zmo3j.frfouenu.bonavkto.djs4p424.r7bn319e.bdao358l.fxk3tzhb.jcxyg2ei.om3e55n1.a5wdgl2o.jvc6uz2b.g90fjkqk,
-.om3e55n1.g4tp4svg.alzwoclg.jez8cy9q.jcxyg2ei.i85zmo3j.sr926ui1.jl2a5g8c.k7n6ui8p.b41d885q.hmqrhxox.got7tec9.frfouenu.bonavkto.djs4p424.r7bn319e.bdao358l.aesu6q9g.e4ay1f3w.a5wdgl2o.ed17d2qt {
-	background-color: var(--secondary-button-background-floating) !important;
 }
 
 /* Search results: Close button */
 /* TODO: Remove when fixed by fb, since --always-white is not good here */
-.q2y6ezfg {
-	background-color: var(--secondary-button-background) !important;
+html.dark-mode .x14hiurz {
+	background-color: transparent !important;
+}
+
+/* Attachment background color in Chat Box */
+/* TODO: Remove when fixed by fb, since #d6d9dd is too bright here */
+/* Current Background-Color is same style as add attachment button */
+html.dark-mode .x1ybostu {
+	background-color: rgba(134 142 153 / 25%);
+}
+
+/* Recipient Pills in new message form */
+/* TODO: Remove when fixed by fb, since #f3f3f4 is too bright here */
+/* It seems FB uses shades of blue here */
+html.dark-mode .x4noic3 {
+	background-color: var(--secondary-button-background);
+}
+
+/* Create room icon color */
+html.dark-mode .x1p6odiv {
+	color: var(--primary-icon);
 }

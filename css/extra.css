@@ -1,4 +1,4 @@
-/* Restore original fonts (for now) */
+/* Restore original fonts  */
 body {
     font-family: Helvetica, Arial, sans-serif !important;
 }
@@ -20,21 +20,6 @@ html.dark-mode .xcrg951 {
     --secondary-text: var(--base-fifty);
     --secondary-button-background: var(--base-ten);
     --mwp-reply-background-color: var(--comment-background) !important;
-}
-
-/* Messenger Room icon */
-.x1p6odiv {
-    color: var(--primary-icon) !important;
-}
-
-/* React menu customize plus icon */
-.xep6ejk {
-    filter: brightness(0) invert(1) !important;
-}
-
-/* Send message field: fix right container corners */
-.cetpsuna {
-    display: none !important;
 }
 
 /* Main chat window: zoom */

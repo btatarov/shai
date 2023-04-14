@@ -2,7 +2,6 @@ const { ipcRenderer } = require('electron')
 
 
 let useDarkColors = false
-
 ipcRenderer.invoke('getColorScheme').then(scheme => {
     useDarkColors = (scheme === 'dark')
 })
@@ -20,4 +19,18 @@ document.addEventListener('DOMContentLoaded', async _ => {
     elements.map(element => {
         element.classList.remove(className)
     })
+
+    // handle scroll events
+    document.addEventListener('scroll', async event => {
+        if (event.target.scrollIntervalHandle) {
+            clearInterval(event.target.scrollIntervalHandle)
+        } else {
+            event.target.classList.add('is-scrolling')
+        }
+        event.target.scrollIntervalHandle = setInterval(_ => {
+            event.target.classList.remove('is-scrolling')
+            clearInterval(event.target.scrollIntervalHandle)
+            event.target.scrollIntervalHandle = null
+        }, 1500)
+    }, true)
 })
