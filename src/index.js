@@ -17,7 +17,7 @@ app.setDesktopName(productName + '.desktop')
 app.setName(productName)
 app.setPath('userCache', path.join(app.getPath('cache'), productName))
 app.setPath('userData', path.join(app.getPath('appData'), productName))
-app.setVersion('0.0.5')
+app.setVersion('0.1.0')
 
 app.whenReady().then(_ => {
     // start the main window
