@@ -11,4 +11,6 @@ dist/
 node_modules/
 
 # extra
+/build.sh
 /TODO.txt
+/shai

@@ -2,21 +2,40 @@
     "name": "shai",
     "productName": "Shai",
     "version": "0.0.5",
+    "description": "Lightweight Facebook Messenger alternative",
     "license": "MIT",
     "author": {
         "name": "Bogdan Tatarov",
         "email": "bogdan@tatarov.me",
         "url": "https://github.com/btatarov"
     },
+    "main": "src",
     "scripts": {
-        "dev": "electron-webpack dev",
-        "compile": "electron-webpack",
-        "dist": "yarn compile && electron-builder",
-        "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
-    },
-    "dependencies": {
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder",
+        "postinstall": "electron-builder install-app-deps"
     },
     "devDependencies": {
-        "electron": "^22.3.3"
+        "electron": "^22.3.6",
+        "electron-builder": "^23.6.0"
+    },
+    "build": {
+        "appId": "me.tatarov.shai",
+        "files": [
+            "**/*",
+            "!media/screenshot.png"
+        ],
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb",
+                "rpm"
+            ],
+            "icon": "media/icons/",
+            "synopsis": "Lightweight Facebook Messenger alternative",
+            "description": "A lightweight Electron app that wraps Facebook Messenger.",
+            "category": "Network;InstantMessaging;Chat"
+        }
     }
 }
