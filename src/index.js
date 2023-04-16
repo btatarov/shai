@@ -61,9 +61,7 @@ app.whenReady().then(_ => {
 
         // inject caprine css
         win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'caprine', 'browser.css'), 'utf8'))
-        if (colorScheme === 'dark') {
-            win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'caprine', 'dark-mode.css'), 'utf8'))
-        }
+        win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'caprine', 'dark-mode.css'), 'utf8'))
 
         // inject our css files
         win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'scrollbars.css'), 'utf8'))
