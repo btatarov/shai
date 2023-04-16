@@ -70,8 +70,11 @@ app.whenReady().then(_ => {
 
     // open links in the default browser
     win.webContents.setWindowOpenHandler(details => {
-        shell.openExternal(details.url)
-        return {action: 'deny'}
+        if (details.url) {
+            shell.openExternal(details.url)
+            return {action: 'deny'}
+        }
+        return {action: 'allow'}
     })
 })
 
