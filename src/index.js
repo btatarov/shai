@@ -56,16 +56,12 @@ app.whenReady().then(_ => {
 
     win.loadURL('https://www.messenger.com/login/')
 
+    // inject the css files
     win.webContents.on('dom-ready', async _ => {
         const cssPath = path.join(__dirname, '..', 'css')
-
-        // inject caprine css
-        win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'caprine', 'browser.css'), 'utf8'))
-        win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'caprine', 'dark-mode.css'), 'utf8'))
-
-        // inject our css files
+        win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'main.css'), 'utf8'))
+        win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'dark.css'), 'utf8'))
         win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'scrollbars.css'), 'utf8'))
-        win.webContents.insertCSS(fs.readFileSync(path.join(cssPath, 'extra.css'), 'utf8'))
     })
 
     // open links in the default browser

@@ -1,21 +1,21 @@
-/* Main chat window: zoom */
-/* TODO: make dynamic */
-[role=main] [role=grid] {
-    zoom: 1.2 !important;
-    border: none !important;
+html.__fb-dark-mode {
+    --header-height: 0px;
+    --container-color: var(--surface-background);
+    --container-dark-color: #1C1E21;
 }
 
 /* Fix some broken colors in dark mode instead of observing for DOM changes */
 .__fb-dark-mode .__fb-light-mode {
+    --primary-text: #E4E6EB;
     --wash: #3E4042;
     --surface-background: #3E4042;
-    --overlay-alpha-80: var(--base-twenty);
-    --shadow-inset: var(--base-five);
+    --overlay-alpha-80: var(--fds-white-alpha-80);
+    --shadow-inset: var(--fds-white-alpha-05);
     --card-background: var(--container-dark-color);
     --divider: var(--list-header-color);
     --primary-icon: var(--always-white);
-    --secondary-text: var(--base-fifty);
-    --secondary-button-background: var(--base-ten);
+    --secondary-text: var(--fds-white-alpha-50);
+    --secondary-button-background: var(--fds-white-alpha-10);
     --mwp-reply-background-color: var(--comment-background) !important;
 }
 
@@ -24,7 +24,13 @@ html.__fb-dark-mode .xcrg951 {
     background-color: var(--container-color) !important;
 }
 
-/* Fix call icons */
+/* Fix icon colors */
+html.__fb-dark-mode .x1p6odiv path {
+    color: var(--primary-icon);
+    fill: currentcolor;
+}
+
+/* Fix call icons in the chat window */
 html.__fb-dark-mode .xep6ejk {
     filter: invert(1);
 }

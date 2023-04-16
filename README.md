@@ -1,6 +1,6 @@
 # Shai: A Lightweight Facebook Messenger Alternative
 
-**Shai** is a simple **Electron** app that wraps [Facebook Messenger](https://www.messenger.com/) and provides a lightweight, minimalist interface for chatting with your friends on Facebook. The app features a sleek dark theme borrowed from the popular [Caprine](https://github.com/sindresorhus/caprine) app with several extra changes and improvements.
+**Shai** is a simple **Electron** app that wraps [Facebook Messenger](https://www.messenger.com/) and provides a lightweight, minimalist interface for chatting with your friends on Facebook. The app features a sleek dark theme and dynamic scrollbars similar to the ones in macOS.
 
 <div align="center">
     <br>

@@ -1,0 +1,6 @@
+/* Main chat window: zoom */
+/* TODO: make dynamic */
+[role=main] [role=grid] {
+    zoom: 1.2 !important;
+    border: none !important;
+}
