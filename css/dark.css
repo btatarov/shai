@@ -4,7 +4,7 @@ html.__fb-dark-mode {
     --container-dark-color: #1C1E21;
 }
 
-/* Fix some broken colors in dark mode instead of observing for DOM changes */
+/* fix some broken colors in dark mode instead of observing for DOM changes */
 .__fb-dark-mode .__fb-light-mode {
     --primary-text: #E4E6EB;
     --wash: #3E4042;
@@ -19,18 +19,18 @@ html.__fb-dark-mode {
     --mwp-reply-background-color: var(--comment-background) !important;
 }
 
-/* Main chat window */
+/* main chat window */
 html.__fb-dark-mode .xcrg951 {
     background-color: var(--container-color) !important;
 }
 
-/* Fix icon colors */
+/* fix icon colors */
 html.__fb-dark-mode .x1p6odiv path {
     color: var(--primary-icon);
     fill: currentcolor;
 }
 
-/* Fix call icons in the chat window */
+/* fix call icons in the chat window */
 html.__fb-dark-mode .xep6ejk {
     filter: invert(1);
 }

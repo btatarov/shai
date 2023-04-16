@@ -2,12 +2,12 @@
     --shai-zoom-level: 1;
 }
 
-/* Zoom level */
+/* zoom level */
 [role=navigation] [role=grid], [role=main] [role=grid] {
     zoom: var(--shai-zoom-level) !important;
 }
 
-/* Make chat list more narrow */
+/* make chat list more narrow */
 .x1cvmir6 {
     width: calc(300px * var(--shai-zoom-level)) !important;
 }
