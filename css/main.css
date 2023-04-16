@@ -1,6 +1,13 @@
-/* Main chat window: zoom */
-/* TODO: make dynamic */
-[role=main] [role=grid] {
-    zoom: 1.2 !important;
-    border: none !important;
+:root {
+    --shai-zoom-level: 1;
+}
+
+/* Zoom level */
+[role=navigation] [role=grid], [role=main] [role=grid] {
+    zoom: var(--shai-zoom-level) !important;
+}
+
+/* Make chat list more narrow */
+.x1cvmir6 {
+    width: calc(300px * var(--shai-zoom-level)) !important;
 }

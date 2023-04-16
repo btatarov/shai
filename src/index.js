@@ -48,6 +48,11 @@ app.whenReady().then(_ => {
         return colorScheme
     })
 
+    // handle zoom level config
+    ipcMain.handle('getZoomLevel', async _ => {
+        return config.zoomLevel
+    })
+
     // don't change title on new messages
     win.setTitle(app.name)
     win.on('page-title-updated', async event => {

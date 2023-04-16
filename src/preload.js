@@ -6,10 +6,18 @@ ipcRenderer.invoke('getColorScheme').then(scheme => {
     colorScheme = (scheme === 'dark') ? 'dark' : 'light'
 })
 
+let zoomLevel = 1
+ipcRenderer.invoke('getZoomLevel').then(level => {
+    zoomLevel = level
+})
+
 document.addEventListener('DOMContentLoaded', async _ => {
     // set light/dark mode
     document.documentElement.classList.toggle('__fb-light-mode', colorScheme === 'light')
     document.documentElement.classList.toggle('__fb-dark-mode', colorScheme === 'dark')
+
+    // set zoom level
+    document.documentElement.style.setProperty('--shai-zoom-level', zoomLevel)
 
     // handle scroll events
     const triggerScrollEvent = async event => {
