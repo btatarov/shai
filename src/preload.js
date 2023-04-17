@@ -37,16 +37,56 @@ document.addEventListener('DOMContentLoaded', async _ => {
     })
     observer.observe(document.documentElement, {childList: true, subtree: true})
 
-    // handle scroll events
+    // handle scrollbar hover events
+    let hoveredElement = null
+    const triggerScrollHoverEvent = async event => {
+        // mouse over scrollbar
+        if (event.target.scrollHeight > event.target.clientHeight) {
+            if(event.target.clientWidth < event.clientX) {
+                // clear previous hovered scrollbar first
+                if (hoveredElement && hoveredElement != event.target) {
+                    if (hoveredElement.blurIntervalHandle) {
+                        clearInterval(hoveredElement.blurIntervalHandle)
+                        hoveredElement.blurIntervalHandle = null
+                        hoveredElement.style.setProperty('--scrollbar-display', 'none')
+                    }
+                }
+
+                // set the new hovered scrollbar
+                hoveredElement = event.target
+                hoveredElement.style.setProperty('--scrollbar-display', 'block')
+                if (hoveredElement.blurIntervalHandle) {
+                    clearInterval(hoveredElement.blurIntervalHandle)
+                    hoveredElement.blurIntervalHandle = null
+                }
+            }
+        }
+
+        // mouse out of scrollbar
+        else if (hoveredElement) {
+            if (! hoveredElement.blurIntervalHandle) {
+                hoveredElement.blurIntervalHandle = setInterval(_ => {
+                    hoveredElement.style.setProperty('--scrollbar-display', 'none')
+                    clearInterval(hoveredElement.blurIntervalHandle)
+                    hoveredElement.blurIntervalHandle = null
+                    hoveredElement = null
+                }, 1500)
+            }
+        }
+    }
+    document.addEventListener('mousemove', triggerScrollHoverEvent)
+
+    // start of regular scroll events
     const triggerScrollEvent = async event => {
         event.target.classList.add('was-scrolled')
     }
     document.addEventListener('wheel', triggerScrollEvent)
     document.addEventListener('touchmove', triggerScrollEvent)
 
+    // handle actual scroll events
     document.addEventListener('scroll', async event => {
         // was event triggered by the user
-        if (!event.target.classList?.contains('was-scrolled') && !event.target.querySelectorAll('.was-scrolled')[0]) {
+        if (!event.target.classList?.contains('was-scrolled') && !event.target.querySelector('.was-scrolled')) {
             return
         }
 

@@ -121,7 +121,7 @@ app.whenReady().then(_ => {
     })
 
     // open links in the default browser
-    win.webContents.setWindowOpenHandler(details => {
+    win.webContents.setWindowOpenHandler(async details => {
         if (details.url) {
             shell.openExternal(details.url)
             return {action: 'deny'}

@@ -1,5 +1,6 @@
 :root {
     --shai-zoom-level: 1;
+    --scrollbar-display: none;
 }
 
 /* zoom level */
@@ -17,6 +18,22 @@
     .x1cvmir6 {
         width: 88px !important;
     }
+}
+
+/* remove right padding in chat list and hide border */
+.xsyo7zv {
+    padding-right: 0px !important;
+}
+.xdppsyt {
+    border-bottom: none !important;
+}
+
+/* fix chat list search padding */
+.x1swvt13 {
+    padding-left: 6px !important;
+}
+.x1pi30zi {
+    padding-right: 12px !important;
 }
 
 /* fix login screen padding */
