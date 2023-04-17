@@ -1,7 +1,7 @@
 {
     "name": "shai",
     "productName": "Shai",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Lightweight Facebook Messenger alternative",
     "license": "MIT",
     "author": {
@@ -29,13 +29,16 @@
             "**/*",
             "!media/screenshot.png"
         ],
+        "asarUnpack": [
+            "media/icon.png"
+        ],
         "linux": {
             "target": [
                 "AppImage",
                 "deb",
                 "rpm"
             ],
-            "icon": "media/icons/",
+            "icon": "build/icons/",
             "synopsis": "Lightweight Facebook Messenger alternative",
             "description": "A lightweight Electron app that wraps Facebook Messenger.",
             "category": "Network;InstantMessaging;Chat"

@@ -18,7 +18,7 @@ app.setDesktopName(productName + '.desktop')
 app.setName(productName)
 app.setPath('userCache', path.join(app.getPath('cache'), productName))
 app.setPath('userData', path.join(app.getPath('appData'), productName))
-app.setVersion('0.1.0')
+app.setVersion('0.2.0')
 
 app.whenReady().then(_ => {
     // start the main window
@@ -26,7 +26,6 @@ app.whenReady().then(_ => {
         width: 1024,
         height: 768,
         title: app.name,
-        iconPath: 'media/icons/512x512.png',
         autoHideMenuBar: config.get('hideMenu'),
         webPreferences: {
             contextIsolation: true,
@@ -61,7 +60,7 @@ app.whenReady().then(_ => {
         applicationVersion: app.getVersion(),
         copyright: 'Created by: Bogdan Tatarov',
         website: 'https://github.com/btatarov/shai',
-        iconPath: 'media/icons/512x512.png'
+        iconPath: path.join(__dirname, '..', 'media', 'icon.png').replace('app.asar', 'app.asar.unpacked'),
     })
 
     // handle main menu events
