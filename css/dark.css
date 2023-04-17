@@ -18,3 +18,8 @@ html.__fb-dark-mode .x14hiurz {
     background: var(--secondary-button-background) !important;
     color: var(--secondary-button-text) !important;
 }
+
+/* fix divider in left sidebar */
+html.__fb-dark-mode .x1tciwvm {
+    border-top: 1px solid var(--fds-white-alpha-30);
+}
