@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', async _ => {
     let hoveredElement = null
     const triggerScrollHoverEvent = async event => {
         // mouse over scrollbar
-        if (event.target.scrollHeight > event.target.clientHeight) {
+        if (event.type !== 'mouseout' && event.target.scrollHeight > event.target.clientHeight) {
+            console.log('here1')
             if(event.target.clientWidth < event.clientX) {
                 // clear previous hovered scrollbar first
                 if (hoveredElement && hoveredElement != event.target) {
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', async _ => {
 
         // mouse out of scrollbar
         else if (hoveredElement) {
+            console.log('here2')
             if (! hoveredElement.blurIntervalHandle) {
                 hoveredElement.blurIntervalHandle = setInterval(_ => {
                     hoveredElement.style.setProperty('--scrollbar-display', 'none')
@@ -75,6 +77,7 @@ document.addEventListener('DOMContentLoaded', async _ => {
         }
     }
     document.addEventListener('mousemove', triggerScrollHoverEvent)
+    document.addEventListener('mouseout', triggerScrollHoverEvent)
 
     // start of regular scroll events
     const triggerScrollEvent = async event => {
