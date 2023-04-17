@@ -9,6 +9,7 @@ const config = require('./config').config
 
 const isMac = process.platform === 'darwin'
 
+
 const renderMenu = async _ => {
     const macosMenuTemplate = [
         // TODO:
@@ -36,6 +37,7 @@ const renderMenu = async _ => {
                                     config.set('colorScheme', 'system')
                                     ipcMain.emit('main-menu', 'restart')
                                 }
+                                renderMenu()
                             }
                         },
                         {
@@ -47,6 +49,7 @@ const renderMenu = async _ => {
                                     config.set('colorScheme', 'light')
                                     ipcMain.emit('main-menu', 'restart')
                                 }
+                                renderMenu()
                             }
                         },
                         {
@@ -58,6 +61,7 @@ const renderMenu = async _ => {
                                     config.set('colorScheme', 'dark')
                                     ipcMain.emit('main-menu', 'restart')
                                 }
+                                renderMenu()
                             }
                         }
                     ]
@@ -73,8 +77,8 @@ const renderMenu = async _ => {
                                 if (config.get('zoomLevel') !== 0.8) {
                                     config.set('zoomLevel', 0.8)
                                     ipcMain.emit('main-menu', 'update-zoom')
-                                    renderMenu()
                                 }
+                                renderMenu()
                             }
                         },
                         {
@@ -85,8 +89,8 @@ const renderMenu = async _ => {
                                 if (config.get('zoomLevel') !== 1.0) {
                                     config.set('zoomLevel', 1.0)
                                     ipcMain.emit('main-menu', 'update-zoom')
-                                    renderMenu()
                                 }
+                                renderMenu()
                             }
                         },
                         {
@@ -97,8 +101,8 @@ const renderMenu = async _ => {
                                 if (config.get('zoomLevel') !== 1.2) {
                                     config.set('zoomLevel', 1.2)
                                     ipcMain.emit('main-menu', 'update-zoom')
-                                    renderMenu()
                                 }
+                                renderMenu()
                             }
                         },
                         {
@@ -109,8 +113,8 @@ const renderMenu = async _ => {
                                 if (config.get('zoomLevel') !== 1.5) {
                                     config.set('zoomLevel', 1.5)
                                     ipcMain.emit('main-menu', 'update-zoom')
-                                    renderMenu()
                                 }
+                                renderMenu()
                             }
                         },
                     ]
