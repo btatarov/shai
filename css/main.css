@@ -3,14 +3,19 @@
     --scrollbar-display: none;
 }
 
-/* zoom level */
-[role=main] [role=grid] {
-    zoom: var(--shai-zoom-level) !important;
+/* zoom levels */
+.x6prxxf {
+    font-size: calc(0.9375rem * var(--shai-zoom-level)) !important;
+    line-height: calc(20px * var(--shai-zoom-level)) !important;
+}
+.x1nxh6w3 {
+    font-size: calc(0.8125rem * var(--shai-zoom-level)) !important;
+    line-height: calc(var(--base-line-clamp-line-height) * var(--shai-zoom-level)) !important;
 }
 
 /* make chat list more narrow */
 .x1cvmir6 {
-    width: 300px !important;
+    width: calc(300px * var(--shai-zoom-level)) !important;
 }
 
 /* fix chat list for smaller window sizes */

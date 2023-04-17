@@ -95,19 +95,31 @@ const renderMenu = async _ => {
                             }
                         },
                         {
-                            label: 'Large (120%)',
+                            label: 'Large (115%)',
                             type: 'checkbox',
-                            checked: config.get('zoomLevel') === 1.2,
+                            checked: config.get('zoomLevel') === 1.15,
                             click: async _ => {
-                                if (config.get('zoomLevel') !== 1.2) {
-                                    config.set('zoomLevel', 1.2)
+                                if (config.get('zoomLevel') !== 1.15) {
+                                    config.set('zoomLevel', 1.15)
                                     ipcMain.emit('main-menu', 'update-zoom')
                                 }
                                 renderMenu()
                             }
                         },
                         {
-                            label: 'Extra large (150%)',
+                            label: 'Extra large (125%)',
+                            type: 'checkbox',
+                            checked: config.get('zoomLevel') === 1.25,
+                            click: async _ => {
+                                if (config.get('zoomLevel') !== 1.25) {
+                                    config.set('zoomLevel', 1.25)
+                                    ipcMain.emit('main-menu', 'update-zoom')
+                                }
+                                renderMenu()
+                            }
+                        },
+                        {
+                            label: 'Huge (150%)',
                             type: 'checkbox',
                             checked: config.get('zoomLevel') === 1.5,
                             click: async _ => {
