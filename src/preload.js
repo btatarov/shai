@@ -19,6 +19,17 @@ document.addEventListener('DOMContentLoaded', async _ => {
     // set zoom level
     document.documentElement.style.setProperty('--shai-zoom-level', zoomLevel)
 
+    // observe the DOM for ivalid color scheme classes
+    const invalidClass = (colorScheme === 'dark') ? '__fb-light-mode' : '__fb-dark-mode'
+    const observer = new MutationObserver(_ => {
+        if (document.querySelector(`.${invalidClass}`)) {
+            [...document.querySelectorAll(`.${invalidClass}`)].map(element => {
+                element.classList.remove(invalidClass)
+            })
+        }
+    })
+    observer.observe(document.documentElement, {childList: true, subtree: true})
+
     // handle scroll events
     const triggerScrollEvent = async event => {
         event.target.classList.add('was-scrolled')

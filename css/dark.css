@@ -1,27 +1,5 @@
 html.__fb-dark-mode {
     --header-height: 0px;
-    --container-color: var(--surface-background);
-    --container-dark-color: #1C1E21;
-}
-
-/* fix some broken colors in dark mode instead of observing for DOM changes */
-.__fb-dark-mode .__fb-light-mode {
-    --primary-text: #E4E6EB;
-    --wash: #3E4042;
-    --surface-background: #3E4042;
-    --overlay-alpha-80: var(--fds-white-alpha-80);
-    --shadow-inset: var(--fds-white-alpha-05);
-    --card-background: var(--container-dark-color);
-    --divider: var(--list-header-color);
-    --primary-icon: var(--always-white);
-    --secondary-text: var(--fds-white-alpha-50);
-    --secondary-button-background: var(--fds-white-alpha-10);
-    --mwp-reply-background-color: var(--comment-background) !important;
-}
-
-/* main chat window */
-html.__fb-dark-mode .xcrg951 {
-    background-color: var(--container-color) !important;
 }
 
 /* fix icon colors */
@@ -33,4 +11,10 @@ html.__fb-dark-mode .x1p6odiv path {
 /* fix call icons in the chat window */
 html.__fb-dark-mode .xep6ejk {
     filter: invert(1);
+}
+
+/* fix search close button */
+html.__fb-dark-mode .x14hiurz {
+    background: var(--secondary-button-background) !important;
+    color: var(--secondary-button-text) !important;
 }
