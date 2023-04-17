@@ -12,14 +12,6 @@ const config = require('./config').config
 const menu = require('./menu').menu
 
 
-const productName = 'Shai'
-app.setAppPath(__dirname)
-app.setDesktopName(productName + '.desktop')
-app.setName(productName)
-app.setPath('userCache', path.join(app.getPath('cache'), productName))
-app.setPath('userData', path.join(app.getPath('appData'), productName))
-app.setVersion('0.2.3')
-
 app.whenReady().then(_ => {
     // start the main window
     const win = new BrowserWindow({
