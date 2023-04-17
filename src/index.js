@@ -9,6 +9,7 @@ const fs = require('fs')
 const path = require('path')
 
 const config = require('./config').config
+const menu = require('./menu').menu
 
 
 const productName = 'Shai'
@@ -25,7 +26,8 @@ app.whenReady().then(_ => {
         width: 1024,
         height: 768,
         title: app.name,
-        autoHideMenuBar: true,
+        iconPath: 'media/icons/512x512.png',
+        autoHideMenuBar: config.get('hideMenu'),
         webPreferences: {
             contextIsolation: true,
             preload: path.join(__dirname, 'preload.js')
@@ -51,6 +53,35 @@ app.whenReady().then(_ => {
     // handle zoom level config
     ipcMain.handle('getZoomLevel', async _ => {
         return config.get('zoomLevel')
+    })
+
+    // set about page options
+    app.setAboutPanelOptions({
+        applicationName: app.name,
+        applicationVersion: app.getVersion(),
+        copyright: 'Created by: Bogdan Tatarov',
+        website: 'https://github.com/btatarov/shai',
+        iconPath: 'media/icons/512x512.png'
+    })
+
+    // handle main menu events
+    ipcMain.on('main-menu', async command => {
+        switch(command) {
+            case 'restart':
+                app.relaunch()
+		        app.quit()
+                break
+            case 'update-zoom':
+                win.webContents.send('api', 'update-zoom')
+                break
+            case 'toggle-menu':
+                win.setAutoHideMenuBar(config.get('hideMenu'))
+                win.setMenuBarVisibility(!config.get('hideMenu'))
+                break
+            case 'about':
+                app.showAboutPanel()
+                break
+        }
     })
 
     // don't change title on new messages

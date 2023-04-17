@@ -2,13 +2,8 @@
     --shai-zoom-level: 1;
 }
 
-/* zoom level for chat list and chat container */
-[role=navigation], [role=main] [role=grid] {
-    zoom: var(--shai-zoom-level) !important;
-}
-
-/* zoom level for chat list menu */
-.xu96u03 {
+/* zoom level */
+[role=main] [role=grid] {
     zoom: var(--shai-zoom-level) !important;
 }
 
@@ -19,10 +14,6 @@
 
 /* fix chat list for smaller window sizes */
 @media (max-width: 900px) {
-    [role=navigation], .xu96u03 {
-        zoom: 1.0 !important;
-    }
-
     .x1cvmir6 {
         width: 88px !important;
     }
