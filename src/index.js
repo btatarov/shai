@@ -66,7 +66,7 @@ app.whenReady().then(_ => {
         switch(command) {
             case 'restart':
                 app.relaunch()
-		        app.quit()
+                app.quit()
                 break
             case 'update-zoom':
                 win.webContents.send('api', 'update-zoom')
@@ -95,12 +95,12 @@ app.whenReady().then(_ => {
     })
 
     win.on('maximize', async _ => {
-		config.set('windowSize.maximized', true)
-	})
+        config.set('windowSize.maximized', true)
+    })
 
-	win.on('unmaximize', async _ => {
-		config.set('windowSize.maximized', false)
-	})
+    win.on('unmaximize', async _ => {
+        config.set('windowSize.maximized', false)
+    })
 
     win.loadURL('https://www.messenger.com/login/')
 
