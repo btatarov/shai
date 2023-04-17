@@ -18,3 +18,8 @@
         width: 88px !important;
     }
 }
+
+/* fix login screen padding */
+._3v_o {
+    padding-bottom: 0 !important;
+}

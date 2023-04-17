@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async _ => {
 
     document.addEventListener('scroll', async event => {
         // was event triggered by the user
-        if (!event.target.classList.contains('was-scrolled') && !event.target.querySelectorAll('.was-scrolled')[0]) {
+        if (!event.target.classList?.contains('was-scrolled') && !event.target.querySelectorAll('.was-scrolled')[0]) {
             return
         }
 
@@ -55,18 +55,18 @@ document.addEventListener('DOMContentLoaded', async _ => {
         target_children.map(element => {
             element.classList.remove('was-scrolled')
         })
-        event.target.classList.remove('was-scrolled')
+        event.target.classList?.remove('was-scrolled')
 
         // is scroll event already in progress?
         if (event.target.scrollIntervalHandle) {
             clearInterval(event.target.scrollIntervalHandle)
         } else {
-            event.target.classList.add('is-scrolling')
+            event.target.classList?.add('is-scrolling')
         }
 
         // timeout to hide the scrollbars
         event.target.scrollIntervalHandle = setInterval(_ => {
-            event.target.classList.remove('is-scrolling')
+            event.target.classList?.remove('is-scrolling')
             clearInterval(event.target.scrollIntervalHandle)
             event.target.scrollIntervalHandle = null
         }, 1500)
