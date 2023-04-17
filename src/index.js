@@ -34,14 +34,14 @@ app.whenReady().then(_ => {
 
     // handle light/dark mode config
     let colorScheme = 'light'
-    if (config.colorScheme === 'system') {
+    if (config.get('colorScheme') === 'system') {
         if (nativeTheme.shouldUseDarkColors) {
             colorScheme = 'dark'
         } else {
             colorScheme = 'light'
         }
     } else {
-        colorScheme = config.colorScheme
+        colorScheme = config.get('colorScheme')
     }
 
     ipcMain.handle('getColorScheme', async _ => {
@@ -50,7 +50,7 @@ app.whenReady().then(_ => {
 
     // handle zoom level config
     ipcMain.handle('getZoomLevel', async _ => {
-        return config.zoomLevel
+        return config.get('zoomLevel')
     })
 
     // don't change title on new messages

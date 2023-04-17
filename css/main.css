@@ -2,12 +2,28 @@
     --shai-zoom-level: 1;
 }
 
-/* zoom level */
-[role=navigation] [role=grid], [role=main] [role=grid] {
+/* zoom level for chat list and chat container */
+[role=navigation], [role=main] [role=grid] {
+    zoom: var(--shai-zoom-level) !important;
+}
+
+/* zoom level for chat list menu */
+.xu96u03 {
     zoom: var(--shai-zoom-level) !important;
 }
 
 /* make chat list more narrow */
 .x1cvmir6 {
-    width: calc(300px * var(--shai-zoom-level)) !important;
+    width: 300px !important;
+}
+
+/* fix chat list for smaller window sizes */
+@media (max-width: 900px) {
+    [role=navigation], .xu96u03 {
+        zoom: 1.0 !important;
+    }
+
+    .x1cvmir6 {
+        width: 88px !important;
+    }
 }
