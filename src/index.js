@@ -78,6 +78,9 @@ app.whenReady().then(_ => {
             case 'about':
                 app.showAboutPanel()
                 break
+            case 'dev-tools': // dev only
+                win.webContents.openDevTools()
+                break
         }
     })
 

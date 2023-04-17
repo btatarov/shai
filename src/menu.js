@@ -1,4 +1,5 @@
 const {
+    app,
     dialog,
     ipcMain,
     Menu,
@@ -153,7 +154,37 @@ const renderMenu = async _ => {
         }
     ]
 
-    const menuTemplate = (isMac) ? macosMenuTemplate : defaultMenuTemplate
+    const debugTemplate = [
+        {
+            label: 'Reload',
+            accelerator: 'CommandOrControl+Shift+R',
+            click: async _ => {
+                ipcMain.emit('main-menu', 'restart')
+            }
+        },
+        {
+            label: 'Delete config',
+            click: async _ => {
+                config.clear()
+                ipcMain.emit('main-menu', 'restart')
+            },
+        },
+        {
+            label: 'Dev tools',
+            accelerator: 'CommandOrControl+Shift+I',
+            click: async _ => {
+                ipcMain.emit('main-menu', 'dev-tools')
+            },
+        }
+    ]
+
+    let menuTemplate = (isMac) ? macosMenuTemplate : defaultMenuTemplate
+    if (! app.isPackaged) {
+        menuTemplate.push({
+            label: 'Debug',
+            submenu: debugTemplate,
+        })
+    }
 
     const menu = Menu.buildFromTemplate(menuTemplate)
     Menu.setApplicationMenu(menu)
