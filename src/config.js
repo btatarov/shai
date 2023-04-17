@@ -17,6 +17,19 @@ const schema = {
         type: 'boolean',
         default: false,
     },
+    windowSize: {
+        type: 'object',
+        properties: {
+            width: { type: 'number' },
+            height: { type: 'number' },
+            maximized: { type: 'boolean' },
+        },
+        default: {
+            width: 1024,
+            height: 768,
+            maximized: false,
+        }
+    },
 }
 
 const config = new Store({schema})

@@ -23,8 +23,10 @@ app.setVersion('0.2.1')
 app.whenReady().then(_ => {
     // start the main window
     const win = new BrowserWindow({
-        width: 1024,
-        height: 768,
+        width: config.get('windowSize.width'),
+        height: config.get('windowSize.height'),
+        minWidth: 510,
+        minHeight: 380,
         title: app.name,
         autoHideMenuBar: config.get('hideMenu'),
         webPreferences: {
@@ -32,6 +34,10 @@ app.whenReady().then(_ => {
             preload: path.join(__dirname, 'preload.js')
         }
     })
+
+    if (config.get('windowSize.maximized')) {
+        win.maximize()
+    }
 
     // handle light/dark mode config
     let colorScheme = 'light'
@@ -88,6 +94,21 @@ app.whenReady().then(_ => {
     win.on('page-title-updated', async event => {
         event.preventDefault()
     })
+
+    // handle window size changes
+    win.on('resize', async _ => {
+        let maximized = config.get('windowSize.maximized')
+        let size = win.getNormalBounds()
+        config.set('windowSize', { width: size.width, height: size.height, maximized: maximized })
+    })
+
+    win.on('maximize', async _ => {
+		config.set('windowSize.maximized', true)
+	})
+
+	win.on('unmaximize', async _ => {
+		config.set('windowSize.maximized', false)
+	})
 
     win.loadURL('https://www.messenger.com/login/')
 
