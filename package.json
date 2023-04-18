@@ -13,7 +13,7 @@
     "scripts": {
         "start": "electron .",
         "pack": "electron-builder --dir",
-        "dist": "electron-builder",
+        "dist": "electron-builder -lw",
         "postinstall": "electron-builder install-app-deps"
     },
     "dependencies": {
@@ -43,6 +43,17 @@
             "synopsis": "Lightweight Facebook Messenger alternative",
             "description": "A lightweight Electron app that wraps Facebook Messenger.",
             "category": "Network;InstantMessaging;Chat"
+        },
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "icon": "build/icon.ico",
+            "verifyUpdateCodeSignature": false
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true
         }
     }
 }
