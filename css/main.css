@@ -45,3 +45,13 @@
 ._3v_o {
     padding-bottom: 0 !important;
 }
+
+/* hide login screen footer */
+#pageFooter {
+    display: none !important;
+}
+
+/* hide "open messenger for windows" link */
+.xt55aet.xb756pt {
+    display: none !important;
+}
