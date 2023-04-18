@@ -26,8 +26,9 @@
     "build": {
         "appId": "me.tatarov.shai",
         "files": [
-            "**/*",
-            "!media/screenshot.png"
+            "css/*",
+            "src/*",
+            "media/icon.png"
         ],
         "asarUnpack": [
             "media/icon.png"
