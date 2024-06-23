@@ -1,6 +1,10 @@
 :root {
     --shai-zoom-level: 1;
     --scrollbar-display: none;
+    --messenger-card-background: transparent !important;
+    --messenger-card-spacing: 0 !important;
+    --messenger-card-corner-radius: 0 !important;
+    --messenger-card-box-shadow: none !important;
 }
 
 /* zoom levels */
@@ -11,6 +15,11 @@
 .x1nxh6w3 {
     font-size: calc(0.8125rem * var(--shai-zoom-level)) !important;
     line-height: calc(var(--base-line-clamp-line-height) * var(--shai-zoom-level)) !important;
+}
+
+/* fix chat switcher padding */
+.x1fdyuju {
+    padding: 8px !important;
 }
 
 /* make chat list more narrow */
@@ -38,6 +47,7 @@
     padding-left: 6px !important;
 }
 .x1pi30zi {
+    padding-top: 6px !important;
     padding-right: 12px !important;
 }
 
@@ -54,4 +64,9 @@
 /* hide "open messenger for windows" link */
 .xt55aet.xb756pt {
     display: none !important;
+}
+
+/* fix background image */
+.xmz0i5r {
+    background-image: none !important;
 }

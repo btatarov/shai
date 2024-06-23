@@ -1,5 +1,6 @@
-html.__fb-dark-mode {
+html.__fb-dark-mode, .__fb-dark-mode {
     --header-height: 0px;
+    --messenger-card-corner-radius: 0 !important;
 }
 
 /* fix icon colors */
@@ -22,4 +23,18 @@ html.__fb-dark-mode .x14hiurz {
 /* fix divider in left sidebar */
 html.__fb-dark-mode .x1tciwvm {
     border-top: 1px solid var(--fds-white-alpha-30);
+}
+
+/* fix main content spacing */
+html.__fb-dark-mode .xdhzj85 {
+    margin-left: 0 !important;
+}
+
+html.__fb-dark-mode .x1bc3s5a {
+    max-height: calc(100vh - var(--header-height)) !important;
+}
+
+/* fix main content background */
+html.__fb-dark-mode .xcrg951 {
+    background-color: none !important;
 }
