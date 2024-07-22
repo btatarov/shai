@@ -70,3 +70,8 @@
 .xmz0i5r {
     background-image: none !important;
 }
+
+/* fix outgoing message background color */
+.x11jlvup {
+    --chat-outgoing-message-bubble-background-color: #0e92eb !important;
+}
