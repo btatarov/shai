@@ -5,6 +5,7 @@
     --messenger-card-spacing: 0 !important;
     --messenger-card-corner-radius: 0 !important;
     --messenger-card-box-shadow: none !important;
+    --messenger-card-max-width: 300px !important;
 }
 
 /* zoom levels */
