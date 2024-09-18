@@ -1,6 +1,8 @@
 html.__fb-dark-mode, .__fb-dark-mode {
     --header-height: 0px;
+    --messenger-card-spacing: 0 !important;
     --messenger-card-corner-radius: 0 !important;
+    --messenger-card-max-width: 300px !important;
 }
 
 /* fix icon colors */
